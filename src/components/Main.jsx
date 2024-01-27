@@ -207,6 +207,6 @@ const SharedImg = styled.div`
   }
 `;
 
-const SocialCount = styled.div``;
+// const SocialCount = styled.div``;
 
 export default Main;
