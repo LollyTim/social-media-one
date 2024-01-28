@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { BiLike, BiSolidLike } from "react-icons/bi";
+// import { PiHandsClapping } from "react-icons/pi";
+import { FaShare, FaRegComment } from "react-icons/fa";
+import { FaHandsClapping } from "react-icons/fa6";
+import { LuSend } from "react-icons/lu";
+import { BsThreeDots } from "react-icons/bs";
 
 const Main = () => {
   return (
@@ -11,19 +17,19 @@ const Main = () => {
         </div>
         <div>
           <button>
-            <img src="images/photo-icon.svg" alt="addphoto" />
+            <img src="images/photo-icon.png" alt="addphoto" />
             <span>photo</span>
           </button>
           <button>
-            <img src="images/video-icon.svg" alt="video" />
+            <img src="images/video-icon.png" alt="video" />
             <span>Video</span>
           </button>
           <button>
-            <img src="/images/eventicon.svg" alt="event" />
+            <img src="/images/event-icon.png" alt="event" />
             <span>Event</span>
           </button>
           <button>
-            <img src="images/article-icon.svg" alt="Article" />
+            <img src="images/article-icon.png" alt="Article" />
             <span>Write Article</span>
           </button>
         </div>
@@ -40,7 +46,7 @@ const Main = () => {
               </div>
             </a>
             <button>
-              <img src="images/ellipsis.svg" alt="ellipsis" />
+              <BsThreeDots width={50} />
             </button>
           </SharedActor>
           <Discription>discription</Discription>
@@ -52,10 +58,33 @@ const Main = () => {
           <SocialCount>
             <li>
               <button>
-                <img src="images/" alt="imGimg" />
+                <BiSolidLike color="#0a66c2" />
+                <FaHandsClapping color="#0a66c2" />
+                <span>75</span>
               </button>
             </li>
+            <li>
+              <a>2 comments</a>
+            </li>
           </SocialCount>
+          <SocialActions>
+            <button>
+              <BiLike color="#0a66c2" />
+              <span>Like</span>
+            </button>
+            <button>
+              <FaShare color="#0a66c2" />
+              <span>Comment</span>
+            </button>
+            <button>
+              <FaRegComment color="#0a66c2" />
+              <span>share</span>
+            </button>
+            <button>
+              <LuSend color="#0a66c2" />
+              <span>send</span>
+            </button>
+          </SocialActions>
         </Article>
       </div>
     </Container>
@@ -94,6 +123,10 @@ const ShareBox = styled(CommonCard)`
       display: flex;
       align-items: center;
       font-weight: 600;
+      cursor: pointer;
+      img {
+        width: 32px;
+      }
     }
     &:first-child {
       display: flex;
@@ -185,6 +218,7 @@ const SharedActor = styled.div`
     background: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
   }
 `;
 
@@ -207,6 +241,57 @@ const SharedImg = styled.div`
   }
 `;
 
-const SocialCount = styled.div``;
+const SocialCount = styled.ul`
+  line-height: 1.3;
+  display: flex;
+  align-items: start;
+  overflow: auto;
+  margin: 0 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9e5df;
+  list-style: none;
+  gap: 1px;
+  li {
+    margin-right: 5px;
+    font-size: 12px;
+    button {
+      display: flex;
+      background: transparent;
+      border: none;
+      gap: 2px;
+      img {
+        width: 15px;
+      }
+    }
+  }
+`;
+
+const SocialActions = styled.div`
+  align-items: center;
+  display: flex;
+  margin: 0;
+  min-height: 40px;
+  padding: 4px 8px;
+  justify-content: space-between;
+  border: none;
+  button {
+    background: transparent;
+    gap: 5px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px;
+    color: #0a66c2;
+    border: none;
+    border-radius: 8px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+    @media (min-width: 768px) {
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+`;
 
 export default Main;

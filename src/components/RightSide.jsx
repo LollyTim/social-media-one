@@ -35,10 +35,7 @@ const RightSide = () => {
         </Rocommendation>
       </FollowCard>
       <BannerCard>
-        <img
-          src="https://ststic.exp1.licdn.com.scds/common/u/images/promo/ads/li_evergreen_job_ad_300x250_v1.jpg"
-          alt="bannerIng"
-        />
+        <img src="/images/outads.png" alt="bannerIng" />
       </BannerCard>
     </Container>
   );
@@ -81,6 +78,9 @@ const FeedList = styled.ul`
     & > div {
       display: flex;
       flex-direction: column;
+      button {
+        cursor: pointer;
+      }
     }
   }
   button {
@@ -102,7 +102,7 @@ const FeedList = styled.ul`
 `;
 
 const Avatar = styled.div`
-  background-image: url("https://ststic-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
+  background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
