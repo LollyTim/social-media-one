@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import Header from "./components/Header";
 import Home from "./components/Home";
+// import Procector from "./components/Procector";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
+          {/* <Route path="/home" element={<Procector />} /> */}
           <Route
             path="/home"
             element={
